@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BacaKuy | Beranda</title>
+    <link rel="stylesheet" href="assets/css/guest.css" />
+    <link rel="stylesheet" href="assets/vendor/slick-js/slick/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/vendor/magnifyPopup/magnific.popup.css">
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="icon">
+        <a href="javascript:void(0)" onclick="myFunction()" style="color: #fff;"><i class="fas fa-bars"></i></a>
+      </div>
+      <div class="logo">
+        <h2>Baca<b>Kuy</b></h2>
+      </div>
+      <div class="menu" id="menu">
+        <ul>
+          <li><a href="index.html" class="active"><i class="fas fa-home"></i> Beranda</a></li>
+          <li><a href="pages/guest/list_book.html"><i class="fas fa-book"></i> Daftar Buku</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn"><i class="fas fa-list"></i> Kategori</a>
+            <div class="dropdown-content">
+              <a href="#">Dongeng</a>
+              <a href="#">Cerpen</a>
+              <a href="#">Cerita Rakyat</a>
+              <a href="#">Puisi</a>
+            </div>
+          </li>
+          <li><a href="#login" id="login"><i class="fas fa-sign-in"></i> Login</a></li>
+          <li><a href="#register" id="register"><i class="fas fa-user"></i> Register</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="banner-area">
+      <div class="single-banner">
+        <div class="banner-img">
+          <img src="assets/img/banner/banner-5.jpeg" alt="">
+        </div>
+        <div class="banner-text">
+          <h2>Welcome To <b>BacaKuy</b></h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic non animi reiciendis iusto consequatur laboriosam harum, nisi quo sit nam quis illum, rerum omnis cupiditate architecto eius rem ipsum dolor.</p>
+          <p class="banner-btn"><a href="pages/guest/list_book.html">Mulai Membaca</a></p>
+        </div>
+      </div>
+      <div class="single-banner">
+        <div class="banner-img">
+          <img src="assets/img/banner/banner-2.jpeg" alt="">
+        </div>
+        <div class="banner-text">
+          <h2>Welcome To <b>BacaKuy</b></h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic non animi reiciendis iusto consequatur laboriosam
+            harum, nisi quo sit nam quis illum, rerum omnis cupiditate architecto eius rem ipsum dolor.</p>
+          <p class="banner-btn"><a href="pages/guest/list_book.html">Mulai Membaca</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="about">
+        <div class="text-about">
+          <img src="assets/img/books/awal-2.jpg" alt="">
+        </div>
+        <div class="text-about">
+          <h4>BacaKuy - Website Baca Buku Dongeng, Cerpen, & Puisi</h4>
+          <p>
+            Selamat datang di dunia BacaKuy! Di sini, imajinasi tak terbatas dan petualangan tak berujung menanti.
+            Bersama-sama, mari kita merangkai kata-kata menjadi kisah-kisah yang indah, mengisahkan pahlawan kecil, binatang
+            ajaib,
+            dan tempat-tempat ajaib. Buku adalah pintu gerbang menuju pengetahuan, keajaiban, dan mimpi. Mari bergabung dan
+            terbang
+            bersama melalui halaman-halaman yang penuh warna, mengeja kebahagiaan di setiap kata. Selamat menikmati
+            petualangan tak
+            terlupakan dalam dunia bacaan ini!
+          </p>
+          <p>
+            Selamat datang di dunia BacaKuy! Di sini, imajinasi tak terbatas dan petualangan tak berujung menanti.
+            Bersama-sama, mari kita merangkai kata-kata menjadi kisah-kisah yang indah, mengisahkan pahlawan kecil, binatang
+            ajaib,
+            dan tempat-tempat ajaib. Buku adalah pintu gerbang menuju pengetahuan, keajaiban, dan mimpi. Mari bergabung dan
+            terbang
+            bersama melalui halaman-halaman yang penuh warna, mengeja kebahagiaan di setiap kata. Selamat menikmati
+            petualangan tak
+            terlupakan dalam dunia bacaan ini!
+          </p>
+          <p>
+            Selamat datang di dunia BacaKuy! Di sini, imajinasi tak terbatas dan petualangan tak berujung menanti.
+            Bersama-sama, mari kita merangkai kata-kata menjadi kisah-kisah yang indah, mengisahkan pahlawan kecil, binatang
+            ajaib,
+            dan tempat-tempat ajaib. Buku adalah pintu gerbang menuju pengetahuan, keajaiban, dan mimpi. Mari bergabung dan
+            terbang
+            bersama melalui halaman-halaman yang penuh warna, mengeja kebahagiaan di setiap kata. Selamat menikmati
+            petualangan tak
+            terlupakan dalam dunia bacaan ini!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal login -->
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-left">
+          <span class="close">&times;</span>
+        </div>
+        <div class="modal-right">
+          <div class="login-container">
+            <h2>Login</h2>
+            <div id="msg"></div>
+            <form>
+              <div class="form-group">
+                <label for="">Username</label>
+                <input type="text" id="username" placeholder="Username">
+              </div>
+              <div class="form-group">
+                <label for="">Password</label>
+                <input type="password" id="password" placeholder="Password">
+              </div>
+              <button type="submit" id="post-login">Login</button>
+              <div class="link-login">
+                Belum Punya Akun? <a href="javascript:void(0)" id="link-register">Daftar</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- register modal -->
+    <div id="registerModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-left">
+          <span class="close">&times;</span>
+        </div>
+        <div class="modal-right">
+          <div class="login-container">
+            <h2>Register</h2>
+            <div id="err"></div>
+            <form>
+              <div class="form-group">
+                <label for="">Username</label>
+                <input type="text" id="username_regis" placeholder="Username">
+              </div>
+              <div class="form-group">
+                <label for="">Email</label>
+                <input type="email" id="email_regis" placeholder="Email Addres">
+              </div>
+              <div class="form-group">
+                <label for="">Password</label>
+                <input type="password" id="password_regis" placeholder="Password">
+              </div>
+              <div class="form-group">
+                <label for="">Konfirmasi Password</label>
+                <input type="password" id="password_confirmation_regis" placeholder="Konfirmasi Password">
+              </div>
+              <button type="submit" id="post-register">Daftar</button>
+              <br>
+              <div class="link-login">
+                Sudah Punya Akun? <a href="javascript:void(0)" id="link-login">Login</a>
+              </div>
+            </form>
+    
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer style="bottom: 0">
+      <div class="fotter">
+        <p>Copyright &copy BacaKuy 2023</p>
+      </div>
+    </footer>
+
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/slick-js/slick/slick.min.js"></script>
+    <script src="assets/vendor/magnifyPopup/jquery.magnific.min.js"></script>
+    <script src="assets/vendor/sweetalert2/sweetAlert.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
