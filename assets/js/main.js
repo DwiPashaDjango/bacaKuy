@@ -162,13 +162,13 @@ $(document).ready(function () {
                 willClose: () => {
                     clearInterval(timerInterval);
                     $('#loginModal').css('display', 'none');
-                    window.location.href = '../user/dashboard.html';
+                    window.location.href = 'dashboard.html';
                 }
             }).then((result) => {
                 if (result.dismiss === Swal.DismissReason.timer) {
                     console.log('I was closed by the timer');
                     $('#loginModal').css('display', 'none');
-                    window.location.href = '../user/dashboard.html';
+                    window.location.href = 'dashboard.html';
                 }
             })
         }

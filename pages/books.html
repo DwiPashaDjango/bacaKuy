@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Buku | BacaKuy</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/user.css" />
+    <link rel="stylesheet" href="../assets/vendor/datatables/datatables.min.css">
+    <style>
+        td img {
+            width: 80px;
+            height: 80px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="mobile-menu" />
+
+    <div class="sidebar">
+        <div class="logo">
+            <i class="fa fa-book-open"></i>
+            <h2>BacaKuy</h2>
+        </div>
+        <div class="menu">
+            <ul>
+                <li>
+                    <a href="../dashboard.html"><i class="fa fa-fire"></i> Dashboard</a>
+                </li>
+                <li>
+                    <a href="users.html"><i class="fa fa-users"></i> Data User</a>
+                </li>
+                <li class="active">
+                    <a href="books.html"><i class="fa fa-book"></i> Data Buku</a>
+                </li>
+                <li>
+                    <a href="pinjam.html"><i class="fa fa-list"></i> Peminjaman</a>
+                </li>
+                <li>
+                    <a href="../index.html"><i class="fa fa-sign-out-alt"></i> Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <label for="mobile-menu" id="mmenu">
+        <i class="fa fa-bars"></i>
+        <i class="fa fa-times"></i>
+    </label>
+
+    <div class="content">
+        <div class="top">
+            <div class="search">
+                <input type="text" placeholder="Search Books" />
+            </div>
+            <div class="user">
+                <i class="fas fa-bell"></i>
+                <label style="position: relative">
+                    <i id="bell" class="fa fa-user" aria-hidden="true"></i>
+                </label>
+            </div>
+        </div>
+
+        <div class="cart-page">
+            <div class="card">
+                <div class="card-body">
+                    <div style="overflow-x: auto;">
+                        <div class="add-book">
+                            <a href="add_book.html" class="btn-info">Tambah</a>
+                        </div>
+                        <table id="table">
+                            <thead>
+                                <tr>
+                                    <th>Gambar</th>
+                                    <th>Kode Rak</th>
+                                    <th>Judul</th>
+                                    <th>Penulis</th>
+                                    <th>Penerbit</th>
+                                    <th>Tahun Terbit</th>
+                                    <th>Jumlah Buku</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <img src="../assets/img/books/asal_usul_burung_hantu.jpeg" alt="">
+                                    </td>
+                                    <td>RK-00001</td>
+                                    <td>Asal Usul Burung Hantu</td>
+                                    <td>Mr.Jawir, S.Pd</td>
+                                    <td>PT. Jawir Nusantara</td>
+                                    <td>1945</td>
+                                    <td>10</td>
+                                    <td>
+                                        <a href="javascript:void(0)" class="btn-info"><i class="fas fa-eye"></i></a>
+                                        <a href="javascript:void(0)" class="btn-warning"><i class="fas fa-pen"></i></a>
+                                        <a href="javascript:void(0)" class="btn-danger"><i class="fas fa-trash"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="../assets/img/books/banterang_suranti.jpeg" alt="">
+                                    </td>
+                                    <td>RK-00002</td>
+                                    <td>Banterang Suranti</td>
+                                    <td>Mr.Jawir, S.Pd</td>
+                                    <td>PT. Jawir Nusantara</td>
+                                    <td>1945</td>
+                                    <td>10</td>
+                                    <td>
+                                        <a href="javascript:void(0)" class="btn-info"><i class="fas fa-eye"></i></a>
+                                        <a href="javascript:void(0)" class="btn-warning"><i class="fas fa-pen"></i></a>
+                                        <a href="javascript:void(0)" class="btn-danger"><i class="fas fa-trash"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="../assets/img/books/jaka_prabangkara.jpeg" alt="">
+                                    </td>
+                                    <td>RK-00003</td>
+                                    <td>Jaka Prabangkara</td>
+                                    <td>Mr.Jawir, S.Pd</td>
+                                    <td>PT. Jawir Nusantara</td>
+                                    <td>1945</td>
+                                    <td>10</td>
+                                    <td>
+                                        <a href="javascript:void(0)" class="btn-info"><i class="fas fa-eye"></i></a>
+                                        <a href="javascript:void(0)" class="btn-warning"><i class="fas fa-pen"></i></a>
+                                        <a href="javascript:void(0)" class="btn-danger"><i class="fas fa-trash"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="../assets/img/books/mutiara_indragiri.jpeg" alt="">
+                                    </td>
+                                    <td>RK-00004</td>
+                                    <td>Mutiara Indragiri</td>
+                                    <td>Mr.Jawir, S.Pd</td>
+                                    <td>PT. Jawir Nusantara</td>
+                                    <td>1945</td>
+                                    <td>10</td>
+                                    <td>
+                                        <a href="javascript:void(0)" class="btn-info"><i class="fas fa-eye"></i></a>
+                                        <a href="javascript:void(0)" class="btn-warning"><i class="fas fa-pen"></i></a>
+                                        <a href="javascript:void(0)" class="btn-danger"><i class="fas fa-trash"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="../assets/img/books/petualangan_baron_sekander.jpeg" alt="">
+                                    </td>
+                                    <td>RK-00005</td>
+                                    <td>Petualangan Baron Sekander</td>
+                                    <td>Mr.Jawir, S.Pd</td>
+                                    <td>PT. Jawir Nusantara</td>
+                                    <td>1945</td>
+                                    <td>10</td>
+                                    <td>
+                                        <a href="javascript:void(0)" class="btn-info"><i class="fas fa-eye"></i></a>
+                                        <a href="javascript:void(0)" class="btn-warning"><i class="fas fa-pen"></i></a>
+                                        <a href="javascript:void(0)" class="btn-danger"><i class="fas fa-trash"></i></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="pagination">
+                            <a href="#" class="pagination-link">&laquo;;</a>
+                            <a href="#" class="pagination-link active">1</a>
+                            <a href="#" class="pagination-link">2</a>
+                            <a href="#" class="pagination-link">3</a>
+                            <a href="#" class="pagination-link">4</a>
+                            <a href="#" class="pagination-link">5</a>
+                            <a href="#" class="pagination-link">&raquo;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../assets/vendor/datatables/datatables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
+    <script src="../assets/js/style.js"></script>
+</body>
+
+</html>

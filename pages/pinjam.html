@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Peminjaman Buku | BacaKuy</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/user.css" />
+    <link rel="stylesheet" href="../assets/vendor/datatables/datatables.min.css">
+    <style>
+        td img {
+            width: 80px;
+            height: 80px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="mobile-menu" />
+
+    <div class="sidebar">
+        <div class="logo">
+            <i class="fa fa-book-open"></i>
+            <h2>BacaKuy</h2>
+        </div>
+        <div class="menu">
+            <ul>
+                <li>
+                    <a href="../dashboard.html"><i class="fa fa-fire"></i> Dashboard</a>
+                </li>
+                <li>
+                    <a href="users.html"><i class="fa fa-users"></i> Data User</a>
+                </li>
+                <li>
+                    <a href="books.html"><i class="fa fa-book"></i> Data Buku</a>
+                </li>
+                <li class="active">
+                    <a href="pinjam.html"><i class="fa fa-list"></i> Peminjaman</a>
+                </li>
+                <li>
+                    <a href="../index.html"><i class="fa fa-sign-out-alt"></i> Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <label for="mobile-menu" id="mmenu">
+        <i class="fa fa-bars"></i>
+        <i class="fa fa-times"></i>
+    </label>
+
+    <div class="content">
+        <div class="top">
+            <div class="search">
+                <input type="text" placeholder="Search Books" />
+            </div>
+            <div class="user">
+                <i class="fas fa-bell"></i>
+                <label style="position: relative">
+                    <i id="bell" class="fa fa-user" aria-hidden="true"></i>
+                </label>
+            </div>
+        </div>
+
+        <div class="cart-page">
+            <div class="card">
+                <div class="card-body">
+                    <div style="overflow-x: auto;">
+                        <div class="search">
+                            <div class="form-group">
+                                <input type="search" name="" class="form-control" placeholder="Search...">
+                            </div>
+                        </div>
+                        <table id="table">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Kode Peminjaman</th>
+                                    <th>Nama Peminjam</th>
+                                    <th>Nim</th>
+                                    <th>Tanggal Pinjam</th>
+                                    <th>Tanggal Dikembalikan</th>
+                                    <th>Denda</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>PNJ-00001</td>
+                                    <td>Suryono</td>
+                                    <td>20221030002</td>
+                                    <td>29-Juni-2023</td>
+                                    <td>08-Juli-2023</td>
+                                    <td>Rp. 7,000</td>
+                                    <td>
+                                        <a href="javascript:void(0)" class="btn-danger"><i class="fas fa-trash"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>PNJ-00002</td>
+                                    <td>Sukri</td>
+                                    <td>20221030002</td>
+                                    <td>29-Juni-2023</td>
+                                    <td>01-Juli-2023</td>
+                                    <td>-</td>
+                                    <td>
+                                        <a href="javascript:void(0)" class="btn-danger"><i class="fas fa-trash"></i></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="pagination">
+                            <a href="#" class="pagination-link">&laquo;;</a>
+                            <a href="#" class="pagination-link active">1</a>
+                            <a href="#" class="pagination-link">2</a>
+                            <a href="#" class="pagination-link">3</a>
+                            <a href="#" class="pagination-link">4</a>
+                            <a href="#" class="pagination-link">5</a>
+                            <a href="#" class="pagination-link">&raquo;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../assets/vendor/datatables/datatables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
+    <script src="../assets/js/style.js"></script>
+</body>
+
+</html>
