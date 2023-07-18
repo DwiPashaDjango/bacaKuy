@@ -1,14 +1,3 @@
-function myFunction() {
-    var elms = document.getElementsByClassName("menu");
-    Array.from(elms).forEach((x) => {
-        if (x.style.display === "none") {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
-        }
-    })
-}
-
 function chart(element) {
     document.getElementById('booksModal').style.display = 'block';
     let image = element.getAttribute("data-id");
@@ -21,6 +10,20 @@ function chart(element) {
 }
 
 $(document).ready(function () {
+    $('#close').css('display', 'none');
+    $('#bars').click(function (e) {
+        e.preventDefault();
+        $('#menu').css('display', 'block');
+        $('#bars').css('display', 'none');
+        $('#close').css('display', 'block');
+    });
+
+    $('#close').click(function (e) {
+        e.preventDefault();
+        $('#close').css('display', 'none');
+        $('#bars').css('display', 'block');
+        $('#menu').css('display', 'none');
+    });
     
     $('.banner-area').slick({
         autoplay: true,

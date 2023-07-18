@@ -2,7 +2,8 @@ $(document).ready(function () {
     $('#table').DataTable({
         responsive: true,
         bInfo: false,
-        bPaginate: false
+        bPaginate: false,
+        ordering: false
     });
 
     var xBar = ["2020", "2021", "2022", "2023"];

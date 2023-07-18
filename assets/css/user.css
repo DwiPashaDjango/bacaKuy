@@ -393,30 +393,6 @@ button {
     justify-content: end;
 }
 
-/* table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
-
-th {
-    background-color: #0a4db8;
-    color: #fff;
-}
-
-td,
-th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 10px;
-    text-align: center;
-}
-
-tr:nth-child(even) {
-    background-color: #dddddd;
-}
- */
-
 .table-responsive {
     overflow-x: auto;
 }
@@ -438,6 +414,7 @@ tr:nth-child(even) {
     color: #737373;
     border: 1px #737373;
     text-align: center;
+    padding: 10px;
 }
 
 #table tr:nth-child(even) {
