@@ -9,10 +9,10 @@ $(document).ready(function () {
      new Chart('barChart', {
         type: 'line',
         data: {
-            labels: ['2020', '2021', '2023', '2024', '2025', '2026'],
+            labels: ['2020', '2021', '2022', '2023'],
             datasets: [{
-                label: 'Data Peminjaman Buku Tahun 2020 - 2026',
-                data: [50, 17, 8, 15, 66, 55],
+                label: 'Data Peminjaman Buku Tahun 2020 - 2023',
+                data: [50, 17, 8, 15],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(255, 159, 64, 0.2)',
@@ -46,10 +46,10 @@ $(document).ready(function () {
     new Chart('pieChart', {
         type: 'bar',
         data: {
-            labels: ['Si Kabayan', 'Sangkuriang', 'Nyonya Menir', 'Jim Labrador', 'Ali Labrador', 'Budi 01 Gaming'],
+            labels: ['Si Kabayan', 'Jim Labrador', 'Ali Labrador', 'Budi 01 Gaming'],
             datasets: [{
-                label: 'Data Buku Populer Buku Tahun 2020 - 2026',
-                data: [50, 17, 8, 15, 66, 55],
+                label: 'Data Buku Populer Buku Tahun 2020 - 2023',
+                data: [50, 17, 8, 15,],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(255, 159, 64, 0.2)',

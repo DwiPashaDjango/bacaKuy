@@ -474,6 +474,21 @@ button {
     background-color: #416297;
 }
 
+.btn-secondary {
+    background-color: #444345;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+}
+
+.btn-info {
+    background-color: #0a4db8;
+    padding: 10px;
+    font-size: 12px;
+    color: white;
+    border-radius: 5px;
+}
+
 @keyframes fade {
     from {
         opacity: 0.4;
