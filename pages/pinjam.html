@@ -11,6 +11,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/user.css" />
     <link rel="stylesheet" href="../assets/vendor/datatables/datatables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/rowreorder/1.4.0/css/rowReorder.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.dataTables.min.css">
 </head>
 <body>
     <input type="checkbox" id="mobile-menu" />
@@ -62,15 +64,11 @@
         <div class="cart-page">
             <div class="card">
                 <div class="card-header">
-                    <!-- <div class="search">
-                        <div class="form-group">
-                            <input type="search" name="" class="form-control" placeholder="Search...">
-                        </div>
-                    </div> -->
+                   
                 </div>
                 <div class="card-body">
                     <div style="overflow-x: auto;">
-                        <table id="table" class="table-responsive">
+                        <table id="table" class="display nowrap" style="width:100%">
                             <thead>
                                 <tr>
                                     <th>No</th>
@@ -139,6 +137,8 @@
 
     <script src="../assets/vendor/jquery/jquery.min.js"></script>
     <script src="../assets/vendor/datatables/datatables.min.js"></script>
+    <script src="https://cdn.datatables.net/rowreorder/1.4.0/js/dataTables.rowReorder.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
     <script src="../assets/js/style.js"></script>
 </body>

@@ -474,9 +474,6 @@ button {
     background-color: #416297;
 }
 
-chart.canvas.parentNode.style.height='128px';
-chart.canvas.parentNode.style.width='128px';
-
 @keyframes fade {
     from {
         opacity: 0.4;
@@ -599,5 +596,24 @@ chart.canvas.parentNode.style.width='128px';
         border: none;
         cursor: pointer;
         border-radius: 3px;
+    }
+
+    .chart-container canvas {
+        height: 500px;
+    }
+
+    #table thead tr th {
+        background-color: #0a4db8;
+        color: #fff;
+        border: 1px solid;
+        font-size: 12px;
+        text-align: left;
+    }
+
+    #table tbody tr td {
+        color: #737373;
+        border: 1px #737373;
+        text-align: left;
+        padding: 10px;
     }
 }

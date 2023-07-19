@@ -43,7 +43,6 @@ $(document).ready(function () {
             },
         }
      });
-    
     new Chart('pieChart', {
         type: 'bar',
         data: {
