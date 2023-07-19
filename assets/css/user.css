@@ -407,6 +407,7 @@ button {
     background-color: #0a4db8;
     color: #fff;
     border: 1px solid;
+    font-size: 12px;
     text-align: center;
 }
 
@@ -421,38 +422,60 @@ button {
     background-color: #dddddd;
 }
 
-.btn-info {
-    background-color: #0a4db8;
-    padding: 8px;
-    color: #fff;
-    border-radius: 5px;
-}
-
-.btn-warning {
-    background-color: #e3b429;
-    padding: 8px;
-    color: #fff;
-    border-radius: 5px;
-}
-
-.btn-danger {
-    background-color: #f31e30;
-    padding: 8px;
-    color: #fff;
-    border-radius: 5px;
-}
-
-.btn-secondary {
-    background-color: #afaeae;
-    padding: 8px;
-    color: #fff;
-    border-radius: 5px;
-}
-
 .add-book {
     padding-top: 10px;
     padding-bottom: 18px;
 }
+
+.dropbtn {
+    background-color: #0a4db8;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #0a4db8;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 3px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: #fff;
+}
+
+.dropdown-content a:hover {
+    background-color: #6485ba;
+    border-radius: 3px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #416297;
+}
+
+chart.canvas.parentNode.style.height='128px';
+chart.canvas.parentNode.style.width='128px';
 
 @keyframes fade {
     from {
@@ -466,7 +489,7 @@ button {
 
 /* Responsive */
 
-@media (max-width: 768px) {
+@media (max-width: 800PX) {
     .sidebar {
         margin-left: -295px;
     }
@@ -568,27 +591,13 @@ button {
         cursor: pointer;
     }
 
-    .btn-info {
+    .dropbtn {
         background-color: #0a4db8;
-        padding: 8px;
-        color: #fff;
-        border-radius: 5px;
-        display: block;
-    }
-
-    .btn-warning {
-        background-color: #e3b429;
-        padding: 8px;
-        color: #fff;
-        border-radius: 5px;
-        display: block;
-    }
-
-    .btn-danger {
-        background-color: #f31e30;
-        padding: 8px;
-        color: #fff;
-        border-radius: 5px;
-        display: block;
+        color: white;
+        padding: 10px;
+        font-size: 10px;
+        border: none;
+        cursor: pointer;
+        border-radius: 3px;
     }
 }

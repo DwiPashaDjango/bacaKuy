@@ -6,60 +6,80 @@ $(document).ready(function () {
         ordering: false
     });
 
-    var xBar = ["2020", "2021", "2022", "2023"];
-    var barColors = ["red", "green", "blue", "orange", "brown"];
-    var yBar = [81, 200, 60, 250];
-
-    const barChart = new Chart('barChart', {
-        type: 'bar',
-        data: {
-            labels: xBar,
-            datasets: [{
-                backgroundColor: barColors,
-                data: yBar
-            }]
-        },
-        options: {
-            maintainAspecRatio: false,
-            layout: {
-                padding: {
-                    left: 10,
-                    rigth: 25,
-                    top: 25,
-                    bottom: 0
-                }
-            },
-        },
-        legend: {
-            display: false
-        }
-
-    });
-
-    var xLine = ["2020", "2021", "2022", "2023"];;
-    var yLine = [100, 25, 351, 250];
-    const pieChart = new Chart('pieChart', {
+     new Chart('barChart', {
         type: 'line',
         data: {
-            labels: xLine,
+            labels: ['2020', '2021', '2023', '2024', '2025', '2026'],
             datasets: [{
-                backgroundColor: barColors,
-                data: yLine
+                label: 'Data Peminjaman Buku Tahun 2020 - 2026',
+                data: [50, 17, 8, 15, 66, 55],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(255, 205, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(201, 203, 207, 0.2)'
+                ],
+                borderWidth: 1,
+                borderColor: 'rgb(75, 192, 192)',
             }]
         },
         options: {
-            maintainAspecRatio: false,
-            layout: {
-                padding: {
-                    left: 10,
-                    rigth: 25,
-                    top: 25,
-                    bottom: 0
+            scales: {
+                y: {
+                    beginAtZero: true
                 }
             },
+             animations: {
+                tension: {
+                    duration: 1000,
+                    easing: 'linear',
+                    from: 1,
+                    to: 0,
+                    loop: true
+                }
+            },
+        }
+     });
+    
+    new Chart('pieChart', {
+        type: 'bar',
+        data: {
+            labels: ['Si Kabayan', 'Sangkuriang', 'Nyonya Menir', 'Jim Labrador', 'Ali Labrador', 'Budi 01 Gaming'],
+            datasets: [{
+                label: 'Data Buku Populer Buku Tahun 2020 - 2026',
+                data: [50, 17, 8, 15, 66, 55],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(255, 205, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(201, 203, 207, 0.2)'
+                ],
+                borderWidth: 1,
+            }]
         },
-        legend: {
-            display: true
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    min: 0,
+                    max: 100
+                }
+            },
+            animations: {
+                tension: {
+                    duration: 1000,
+                    easing: 'linear',
+                    from: 1,
+                    to: 0,
+                    loop: true
+                }
+            },
         }
     });
 });
