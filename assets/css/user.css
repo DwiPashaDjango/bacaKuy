@@ -489,6 +489,10 @@ button {
     border-radius: 5px;
 }
 
+.categories .count {
+    float: right;
+}
+
 @keyframes fade {
     from {
         opacity: 0.4;
@@ -630,5 +634,10 @@ button {
         border: 1px #737373;
         text-align: left;
         padding: 10px;
+    }
+
+    .categories .count {
+        display: block;
+        float: none;
     }
 }

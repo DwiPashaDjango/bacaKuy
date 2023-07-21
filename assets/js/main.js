@@ -1,9 +1,12 @@
 function chart(element) {
+    let btn = document.getElementById('save');
     document.getElementById('booksModal').style.display = 'block';
     let image = element.getAttribute("data-id");
     var imageContainer = document.getElementById("append");
     var imageElement = document.createElement("img");
     imageElement.src = image; 
+
+    btn.innerHTML = 'Pinjam'
 
     imageContainer.innerHTML = "";
     imageContainer.appendChild(imageElement);
@@ -62,6 +65,7 @@ $(document).ready(function () {
         e.preventDefault();
         $('#registerModal').css('display', 'none');
         $('#loginModal').css('display', 'block');
+        $('#post-login').html('Login');
     });
 
     $('#link-register').click(function (e) {
@@ -70,114 +74,112 @@ $(document).ready(function () {
         $('#registerModal').css('display', 'block');
     });
 
-    $('#save').click(function (e) {
+    $(document).on('click', '#save', function (e) {
         e.preventDefault();
         let name = $('#name').val();
         let nim = $('#nim').val();
         let email = $('#email').val();
+        let prodi = $('#prodi').val();
 
         if (name == '') {
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Isikan nama saudara!',
-            })
+            $('#err').fadeIn();
+            $('#err').html(`<div class="alert-dangers">
+                                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                                Silahkan masukan username saudara.
+                            </div>`);
+            setTimeout(() => {
+                $('#err').fadeOut();
+            }, 2000);
         } else if (nim == '') {
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Isikan nim saudara!',
-            })
+            $('#err').fadeIn();
+            $('#err').html(`<div class="alert-dangers">
+                                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                                Silahkan masukan nomor induk mahasiswa saudara.
+                            </div>`);
+            setTimeout(() => {
+                $('#err').fadeOut();
+            }, 2000);
         } else if (email == '') {
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Isikan email saudara!',
-            })
+            $('#err').fadeIn();
+            $('#err').html(`<div class="alert-dangers">
+                                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                                Silahkan masukan email saudara.
+                            </div>`);
+            setTimeout(() => {
+                $('#err').fadeOut();
+            }, 2000);
+        } else if (prodi == '') {
+            $('#err').fadeIn();
+            $('#err').html(`<div class="alert-dangers">
+                                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                                Silahkan pilih program studi saudara.
+                            </div>`);
+            setTimeout(() => {
+                $('#err').fadeOut();
+            }, 2000);
         } else {
-            let timerInterval
-            Swal.fire({
-                icon: 'success',
-                title: 'Meminjam Buku.',
-                html: 'Prosessing in <b></b> milliseconds.',
-                timer: 2000,
-                timerProgressBar: true,
-                didOpen: () => {
-                    Swal.showLoading()
-                    const b = Swal.getHtmlContainer().querySelector('b')
-                    timerInterval = setInterval(() => {
-                    b.textContent = Swal.getTimerLeft()
-                    }, 100)
-                },
-                willClose: () => {
-                    clearInterval(timerInterval);
-                    $('#booksModal').css('display', 'none');
-                    $('.form-validation')[0].reset();
-                }
-            }).then((result) => {
-                if (result.dismiss === Swal.DismissReason.timer) {
-                    console.log('I was closed by the timer');
-                    $('#booksModal').css('display', 'none');
-                    $('.form-validation')[0].reset();
-                }
-            })
+            $('#save').html('Posess...');
+            setTimeout(() => {
+                $('#save').html('Success');
+                $('#msg').fadeIn();
+                $('#msg').html(`<div class="alert alert-success">
+                                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                                    Berhasil meminjam buku.
+                                </div>`);
+                setTimeout(() => {
+                    $('#msg').fadeOut();
+                    setTimeout(() => {
+                        $('#booksModal').css('display', 'none');
+                    }, 1000);
+                }, 2000);
+            }, 2000);
         }
     });
 
-    $('#post-login').click(function (e) {
+    $(document).on('click', '#post-login', function (e) {
         e.preventDefault();
         let username = $('#username').val();
         let password = $('#password').val();
 
         if (username == '') {
-            $('#msg').fadeIn();
-            $('#msg').html(`<div class="alert-dangers">
+            $('#err-log').fadeIn();
+            $('#err-log').html(`<div class="alert-dangers">
                                 <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
                                 Masukan Username.
                             </div>`);
             setTimeout(() => {
-                $('#msg').fadeOut();
+                $('#err-log').fadeOut();
             }, 2000);
         } else if (password == '') {
-            $('#msg').fadeIn();
-            $('#msg').html(`<div class="alert-dangers">
+            $('#err-log').fadeIn();
+            $('#err-log').html(`<div class="alert-dangers">
                                 <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
                                 Masukan Password.
                             </div>`);
             setTimeout(() => {
-                $('#msg').fadeOut();
+                $('#err-log').fadeOut();
             }, 2000);
         } else {
-            let timerInterval
-            Swal.fire({
-                icon: 'success',
-                title: 'Berhasil.',
-                html: 'Prosessing in <b></b> milliseconds.',
-                timer: 2000,
-                timerProgressBar: true,
-                didOpen: () => {
-                    Swal.showLoading()
-                    const b = Swal.getHtmlContainer().querySelector('b')
-                    timerInterval = setInterval(() => {
-                    b.textContent = Swal.getTimerLeft()
-                    }, 100)
-                },
-                willClose: () => {
-                    clearInterval(timerInterval);
-                    $('#loginModal').css('display', 'none');
-                    window.location.href = 'dashboard.html';
-                }
-            }).then((result) => {
-                if (result.dismiss === Swal.DismissReason.timer) {
-                    console.log('I was closed by the timer');
-                    $('#loginModal').css('display', 'none');
-                    window.location.href = 'dashboard.html';
-                }
-            })
+            $('#post-login').html('Posess...');
+            setTimeout(() => {
+                $('#post-login').html('Success');
+                $('#msg-log').fadeIn();
+                $('#msg-log').html(`<div class="alert alert-success">
+                                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                                    Akun terdaftar.
+                                </div>`);
+                setTimeout(() => {
+                    $('#post-login').html('Login');
+                    $('#msg-log').fadeOut();
+                    setTimeout(() => {
+                        window.location.href = 'dashboard.html';
+                    }, 800);
+                }, 2000);
+            }, 2000);
         }
     });
 
-    $('#post-register').click(function (e) {
+    $(document).on('click', '#post-register', function (e) {
         e.preventDefault();
         let username = $('#username_regis').val();
         let email = $('#email_regis').val();
@@ -185,53 +187,59 @@ $(document).ready(function () {
         let password_confirmation = $('#password_confirmation_regis').val();
 
         if (username == '') {
-            $('#err').fadeIn();
-            $('#err').html(`<div class="alert-dangers">
+            $('#err-reg').fadeIn();
+            $('#err-reg').html(`<div class="alert-dangers">
                                 <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
                                 Userame Tidak Boleh Kosong.
                             </div>`);
             setTimeout(() => {
-                $('#err').fadeOut();
+                $('#err-reg').fadeOut();
             }, 2000);
         } else if (email == '') {
-            $('#err').fadeIn();
-            $('#err').html(`<div class="alert-dangers">
+            $('#err-reg').fadeIn();
+            $('#err-reg').html(`<div class="alert-dangers">
                                 <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
                                 Email Tidak Boleh Kosong.
                             </div>`);
             setTimeout(() => {
-                $('#err').fadeOut();
+                $('#err-reg').fadeOut();
             }, 2000);
         } else if (password == '') {
-            $('#err').fadeIn();
-            $('#err').html(`<div class="alert-dangers">
+            $('#err-reg').fadeIn();
+            $('#err-reg').html(`<div class="alert-dangers">
                                 <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
                                 Password Tidak Boleh Kosong.
                             </div>`);
             setTimeout(() => {
-                $('#err').fadeOut();
+                $('#err-reg').fadeOut();
             }, 2000);
         } else if (password_confirmation == '') {
-            $('#err').fadeIn();
-            $('#err').html(`<div class="alert-dangers">
+            $('#err-reg').fadeIn();
+            $('#err-reg').html(`<div class="alert-dangers">
                                 <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
                                 Konfirmasi Password Tidak Boleh Kosong.
                             </div>`);
             setTimeout(() => {
-                $('#err').fadeOut();
+                $('#err-reg').fadeOut();
             }, 2000);
         } else {
-            $('#registerModal').css('display', 'none');
-            $('#loginModal').css('display', 'block');
-
-            $('#msg').fadeIn();
-            $('#msg').html(`<div class="alert alert-success">
-                                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-                                <strong>Berhasil!</strong> silahkan login.
-                            </div>`);
+            $('#post-register').html('Prosess...');
             setTimeout(() => {
-                $('#msg').fadeOut();
-            }, 2000);
+                setTimeout(() => {
+                    $('#post-register').html('Daftar');
+                    $('#registerModal').css('display', 'none');
+                    $('#loginModal').css('display', 'block');
+        
+                    $('#msg-log').fadeIn();
+                    $('#msg-log').html(`<div class="alert alert-success">
+                                        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                                        <strong>Berhasil!</strong> silahkan login.
+                                    </div>`);
+                    setTimeout(() => {
+                        $('#msg-log').fadeOut();
+                    }, 2000);
+                }, 1000);
+            }, 1000);
         }
     });
 

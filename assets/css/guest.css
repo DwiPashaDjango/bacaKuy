@@ -59,13 +59,11 @@ a {
 }
 
 .menu a:hover {
-    background-color: #304a74;
-    border-radius: 5px;
+    border-bottom: 3px solid #fff;
 }
 
 .menu .active {
-    background-color: #304a74;
-    border-radius: 5px;
+    border-bottom: 3px solid #fff;
 }
 
 .dropdown {
@@ -91,7 +89,7 @@ a {
 }
 
 .dropdown-content a:hover {
-    background-color: #304a74;
+    border-bottom: 3px solid #fff;
 }
 
 .dropdown:hover .dropdown-content {
@@ -255,6 +253,7 @@ iframe {
     text-align: center;
     border-radius: 10px;
     cursor: pointer;
+    padding: 10px;
 }
 
 .content .book img {
@@ -272,7 +271,7 @@ iframe {
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 999;
     left: 0;
     top: 0;
     width: 100%;
@@ -283,7 +282,7 @@ iframe {
 
 .modal-content {
     background-color: #fefefe;
-    margin: 10% auto;
+    margin: 5% auto;
     padding: 20px;
     border: 1px solid #888;
     border-radius: 5px;
@@ -353,11 +352,20 @@ iframe {
     border: 1px solid #ccc;
 }
 
-.btn {
+.form-group select {
+    width: 99%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.btn-save {
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 5px;
     background-color: #337ab7;
+    width: 100%;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -577,6 +585,128 @@ iframe {
 
     .content .book {
         width: 100%;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group textarea {
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 1048) {
+    .menu {
+        display: none;
+    }
+
+    .menu {
+        width: 100%;
+        background-color: #0a4db8;
+        float: left;
+    }
+
+    .menu ul {
+        list-style: none;
+        float: left;
+    }
+
+    .menu ul li {
+        display: block;
+        justify-content: start;
+    }
+
+    .menu ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .logo {
+        width: auto;
+    }
+
+    .icon {
+        display: block;
+        float: right;
+        color: #fff;
+        padding: 18px;
+        text-decoration: none;
+    }
+
+    .banner-img img {
+        width: auto;
+        height: 100vh;
+    }
+
+    .banner-text h2 {
+        font-size: 30px;
+        text-transform: uppercase;
+        color: #ededed;
+        margin: 0;
+    }
+
+    .banner-text p {
+        font-size: 15px;
+    }
+
+    .col-3 {
+        float: left;
+        width: 50%;
+    }
+
+    .card-image-area {
+        padding-left: 0;
+    }
+
+    .card-image-area .card-image img {
+        padding: 10px;
+        width: 50%;
+        padding-left: 55px;
+    }
+
+    .about {
+        width: 90%;
+        display: block;
+        background: #fff;
+    }
+
+    .text-about {
+        width: 100%;
+        position: relative;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .text-about-2 {
+        width: 100%;
+        position: relative;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    iframe {
+        width: 300px;
+        height: 250px;
+    }
+
+    .text-about img {
+        width: 100%;
+    }
+
+    .content .books {
+        width: 100%;
+        display: flex;
+    }
+
+    .content .book {
+        width: 30.9%;
+        position: relative;
+        margin: 5px 5px;
+        background: #f6f5fb;
+        text-align: center;
+        border-radius: 10px;
+        cursor: pointer;
+        padding: 10px;
     }
 
     .form-group input[type="text"],

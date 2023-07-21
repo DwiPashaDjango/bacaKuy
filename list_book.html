@@ -18,7 +18,8 @@
             <a href="javascript:void(0)" id="close" style="color: #fff;"><i class="fas fa-close"></i></a>
         </div>
         <div class="logo">
-            <h2>Baca<b>Kuy</b></h2>
+            <h2 style="text-transform: uppercase;">Baca<b
+                    style="background-color: #fff; padding: 3px; color: black; border-radius: 5px;">Kuy</b></h2>
         </div>
         <div class="menu" id="menu">
             <ul>
@@ -178,6 +179,8 @@
             </div>
             <div class="modal-right">
                 <form class="form-validation">
+                    <div id="msg"></div>
+                    <div id="err"></div>
                     <div class="form-group">
                         <label for="name">Nama</label>
                         <input type="text" id="name" name="name" placeholder="Masukkan nama">
@@ -192,8 +195,20 @@
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" placeholder="Masukkan email">
                     </div>
+
+                    <div class="form-group">
+                        <label for="email">Program Studi</label>
+                        <select name="" id="prodi">
+                            <option value="">-Pilih -</option>
+                            <option value="Sistem Informasi">Sistem Informasi</option>
+                            <option value="Teknik Informatika">Teknik Informatika</option>
+                            <option value="Manajemen Informatika">Manajemen Informatika</option>
+                            <option value="Akuntansi">Akuntansi</option>
+                            <option value="DKV">DKV</option>
+                        </select>
+                    </div>
                     <br>
-                    <button type="button" id="save" class="btn">Kirim</button>
+                    <button type="button" id="save" class="btn-save"></button>
                 </form>
             </div>
         </div>
@@ -208,15 +223,16 @@
             <div class="modal-right">
                 <div class="login-container">
                     <h2>Login</h2>
-                    <div id="msg"></div>
+                    <div id="err-log"></div>
+                    <div id="msg-log"></div>
                     <form>
                         <div class="form-group">
                             <label for="">Username</label>
-                            <input type="text" id="username" placeholder="Username">
+                            <input type="text" id="username" required placeholder="Username">
                         </div>
                         <div class="form-group">
                             <label for="">Password</label>
-                            <input type="password" id="password" placeholder="Password">
+                            <input type="password" id="password" required placeholder="Password">
                         </div>
                         <button type="submit" id="post-login">Login</button>
                         <div class="link-login">
@@ -237,23 +253,23 @@
             <div class="modal-right">
                 <div class="login-container">
                     <h2>Register</h2>
-                    <div id="err"></div>
-                    <form>
+                    <div id="err-reg"></div>
+                    <form class="form-validation">
                         <div class="form-group">
                             <label for="">Username</label>
-                            <input type="text" id="username_regis" placeholder="Username">
+                            <input type="text" required id="username_regis" placeholder="Username">
                         </div>
                         <div class="form-group">
                             <label for="">Email</label>
-                            <input type="email" id="email_regis" placeholder="Email Addres">
+                            <input type="email" required id="email_regis" placeholder="Email Addres">
                         </div>
                         <div class="form-group">
                             <label for="">Password</label>
-                            <input type="password" id="password_regis" placeholder="Password">
+                            <input type="password" required id="password_regis" placeholder="Password">
                         </div>
                         <div class="form-group">
                             <label for="">Konfirmasi Password</label>
-                            <input type="password" id="password_confirmation_regis" placeholder="Konfirmasi Password">
+                            <input type="password" required id="password_confirmation_regis" placeholder="Konfirmasi Password">
                         </div>
                         <button type="submit" id="post-register">Daftar</button>
                         <br>
