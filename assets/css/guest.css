@@ -25,6 +25,7 @@ a {
     left: 0;
     right: 0;
     background-color: #0a4db8;
+    box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
@@ -254,6 +255,7 @@ iframe {
     border-radius: 10px;
     cursor: pointer;
     padding: 10px;
+    box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.2);
 }
 
 .content .book img {
@@ -266,6 +268,12 @@ iframe {
     padding: 10px;
     float: right;
     color: #b5b4ba;
+}
+
+.content .book img:hover {
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+    width: 300px;
 }
 
 .modal {
@@ -685,7 +693,7 @@ iframe {
     }
 
     iframe {
-        width: 300px;
+        width: 200px;
         height: 250px;
     }
 
