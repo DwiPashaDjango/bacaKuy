@@ -624,6 +624,12 @@ img.avatar {
     .form-group textarea {
         width: 95%;
     }
+
+    .imgcontainer img {
+        width: 30%;
+        text-align: center;
+        margin: 24px 0 12px 0;
+    }
 }
 
 @media only screen and (max-width: 1048) {
@@ -661,7 +667,7 @@ img.avatar {
         display: block;
         float: right;
         color: #fff;
-        padding: 18px;
+        padding: 25px;
         text-decoration: none;
     }
 
