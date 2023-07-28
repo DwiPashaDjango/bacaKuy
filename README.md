@@ -1,4 +1,4 @@
-# bacaKuy
+# bacaKuy (belum termasuk backend)
 
 Website Baca Buku Dongeng, Fiksi, Dan Juga Puisi
 
