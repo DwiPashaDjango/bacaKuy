@@ -18,3 +18,7 @@ Cara Download Dengan Tombol Unduh Github
 - Klick tombol code
 - Pilih menu Download Zip
 - Selamat source code sudah bisa digunakan
+
+
+Instagram : https://www.instagram.com/dwi_pasha_/
+Github    : https://github.com/DwiPashaDjango
