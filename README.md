@@ -4,8 +4,6 @@ Website Baca Buku Dongeng, Fiksi, Dan Juga Puisi
 
 Silahkan Download Source Code Ini Untuk Di Pelajari
 
-Jangan Lupa Bintangnya
-
 Cara Download Dengan Git Clone
 
 - Buka cmd(terminal windows)
@@ -23,3 +21,5 @@ Cara Download Dengan Tombol Unduh Github
 Instagram : https://www.instagram.com/dwi_pasha_/
 <br>
 Github    : https://github.com/DwiPashaDjango
+
+<b> Jangan Lupa Bintangnya </b>
