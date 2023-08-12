@@ -29,6 +29,7 @@ $(document).ready(function () {
     });
     
     $('.banner-area').slick({
+	infinite: true,
         autoplay: true,
         speed: 100,
         arrows: false,
